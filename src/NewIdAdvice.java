@@ -13,6 +13,8 @@ public class NewIdAdvice {
     }
     static String changeWord(String value){
         ArrayList<String> ar = new ArrayList<>();
+        
+
         String attachbox ="";
         // 1단계 new_id의 모든 대문자를 대응되는 소문자로 치환합니다.
         String ch = value.toLowerCase();
@@ -31,14 +33,19 @@ public class NewIdAdvice {
         // 3단계 new_id에서 마침표(.)가 2번 이상 연속된 부분을 하나의 마침표(.)로 치환합니다.
         String pacomaRemove = Pattern.compile("(([.])\\2{1,})").matcher(attachbox).replaceAll(".");
         // 4단계 new_id에서 마침표(.)가 처음이나 끝에 위치한다면 제거합니다.
+        StringBuilder sb = new StringBuilder(pacomaRemove);
         for (int i = 0; i < pacomaRemove.length(); i++) {
             if (pacomaRemove.charAt(0) == '.') {
-                System.out.println(" . 제거");
-            }else if (i == pacomaRemove.length() - 1) {
-                System.out.println("21번째");
+                sb.deleteCharAt(0);
+                System.out.println(sb);
+            }
+            if (i == pacomaRemove.length() - 1) {
+                int o = pacomaRemove.length() - 1;
+                // sb.deleteCharAt(pacomaRemove.length() - 1);
             }
         }
-        
+        // attachbox = sb.toString();
+        System.out.println(sb);
         return attachbox;
     }
     public static void main(String[] args) {
@@ -47,6 +54,6 @@ public class NewIdAdvice {
         // "...!@BaT#*..y.abcdefghijklm"
         // "z-+.^."
         // "123_.def"
-        String t1 = ne.solution("...!@BaT#*..y.abcdefghijklm.");
+        ne.solution("...!@BaT#*..y.abcdefghijklm.");
     }
 }
