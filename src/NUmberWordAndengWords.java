@@ -82,13 +82,17 @@ public class NUmberWordAndengWords {
                 default:
                     isNumeric = attachBox.matches("[+-]?\\d*(\\.\\d+)?");
                     if (isNumeric) {
+                        System.out.println("check : "+ isNumeric);
                         an = attachBox;
+                        System.out.println("am : "+ an);
                         // an2 += attachBox;
                     }else {
                         break;
                     }
                     break;
                 }
+                // System.out.println(attachBox);
+                // System.out.println(an2);
         }
         return 0;
     }
@@ -98,7 +102,7 @@ public class NUmberWordAndengWords {
             System.out.println("cchck");
             str = "1";
             int strtoNumber = Integer.parseInt(str);
-            System.out.println(strtoNumber);
+            
             return strtoNumber; 
         }
         return 0;
