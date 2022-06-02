@@ -13,7 +13,6 @@ public class NewIdAdvice {
     }
     static String changeWord(String value){
         ArrayList<String> ar = new ArrayList<>();
-        
 
         String attachbox ="";
         // 1단계 new_id의 모든 대문자를 대응되는 소문자로 치환합니다.
@@ -30,23 +29,27 @@ public class NewIdAdvice {
             attachbox += ar.get(i); 
             // System.eWout.println(attachbox);
         }
-        // 3단계 new_id에서 마침표(.)가 2번 이상 연속된 부분을 하나의 마침표(.)로 치환합니다.
+        // 3단계 new_id에서 마침표(.)가 2번 이상 연속된 부분을 하나의 마침표(.)로 치환합니다.m
         String pacomaRemove = Pattern.compile("(([.])\\2{1,})").matcher(attachbox).replaceAll(".");
         // 4단계 new_id에서 마침표(.)가 처음이나 끝에 위치한다면 제거합니다.
-        StringBuilder sb = new StringBuilder(pacomaRemove);
         for (int i = 0; i < pacomaRemove.length(); i++) {
             if (pacomaRemove.charAt(0) == '.') {
-                sb.deleteCharAt(0);
-                System.out.println(sb);
+                attachbox = sbfn(pacomaRemove, 0);
+                return attachbox;
             }
             if (i == pacomaRemove.length() - 1) {
-                int o = pacomaRemove.length() - 1;
                 // sb.deleteCharAt(pacomaRemove.length() - 1);
+                System.out.println(attachbox);
             }
         }
         // attachbox = sb.toString();
-        System.out.println(sb);
         return attachbox;
+    }
+    static String sbfn(String str, int number){
+        StringBuilder sb = new StringBuilder(str);
+        System.out.println(sb);
+        sb.deleteCharAt(number);
+        return sb.toString();
     }
     public static void main(String[] args) {
         NewIdAdvice ne = new NewIdAdvice();
