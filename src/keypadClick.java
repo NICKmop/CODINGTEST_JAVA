@@ -16,7 +16,7 @@ public class keypadClick {
                 right = String.valueOf(numbers[i]);
             }else{
                 String mid = midValue(numbers[i],right, left, hand);
-                result += "mid";
+                result += mid;
             }
             // System.out.println(result);
         }
