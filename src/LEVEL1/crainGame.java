@@ -1,3 +1,4 @@
+package LEVEL1;
 public class crainGame {
     public int solution(int[][] board, int[] moves) {
         
