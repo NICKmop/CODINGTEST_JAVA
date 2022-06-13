@@ -23,7 +23,7 @@ public class NUmberWordAndengWords {
                 case "zero": an = attachBox;
                     an2 = an;
 
-                    converter(an2);
+                    converter(an2);;
                     attachBox ="";
                     continue;
                 case "one": an = attachBox;
