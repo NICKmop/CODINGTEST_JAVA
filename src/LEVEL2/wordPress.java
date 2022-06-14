@@ -14,10 +14,7 @@ public class wordPress {
 
             for(int j = i; j <= s.length(); j += i){
                 // 다음 문자 추출
-                System.out.println("j : "+ j);
                 String next = s.substring(j, j + i > s.length() ? s.length() : i + j);
-                System.out.println("next : "+ next);
-                System.out.println("zipStr : " + zipStr);
                 // 다음 문자와 현재 문자가 같으면 zipLevel증가
                 if(zipStr.equals(next)) {
                     zipLevel++;
