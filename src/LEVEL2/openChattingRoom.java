@@ -17,6 +17,7 @@ public class openChattingRoom {
             System.out.println("userState : " + userState);
             String uid = st.nextToken();
             System.out.println("uid : " + uid);
+            
 
             String name = userState.equals("Leave") ? "" : st.nextToken();
 
