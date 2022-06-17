@@ -14,10 +14,7 @@ public class openChattingRoom {
         for (String s : record) {
             StringTokenizer st = new StringTokenizer(s);
             String userState = st.nextToken();
-            System.out.println("userState : " + userState);
             String uid = st.nextToken();
-            System.out.println("uid : " + uid);
-            
 
             String name = userState.equals("Leave") ? "" : st.nextToken();
 
