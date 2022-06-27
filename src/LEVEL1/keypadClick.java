@@ -2,11 +2,11 @@ package LEVEL1;
 public class keypadClick {
 
     public String solution(int[] numbers, String hand) {
-        String result = "";
         
         String left = "*";
         String right = "#";
-
+        String result = "";
+        
         for (int i = 0; i < numbers.length; i++) {
             // System.out.println(numbers[i]);
             if(numbers[i] == 1 || numbers[i] == 4 || numbers[i] == 7 ){

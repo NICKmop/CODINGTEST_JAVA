@@ -2,7 +2,6 @@ package LEVEL1;
 
 import java.util.ArrayList;
 
-import javax.swing.plaf.TreeUI;
 
 // absolutes = 1 <= 1000 every number
 // signs this value same the absolutes

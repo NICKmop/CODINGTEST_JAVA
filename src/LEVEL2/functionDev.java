@@ -6,7 +6,6 @@ public class functionDev {
     int[] solution(int [] progress, int [] speeds){
         ArrayList<Integer> in = new ArrayList<Integer>(); 
         ArrayList<Integer> test = new ArrayList<Integer>(); 
-        ArrayList<Integer> test2 = new ArrayList<Integer>(); 
         
         int [] answer = {};
         int cnt = 1;
